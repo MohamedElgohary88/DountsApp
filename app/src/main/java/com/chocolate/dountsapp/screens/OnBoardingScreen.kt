@@ -41,16 +41,10 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 @Composable
 fun OnBoardingScreen() {
 
-    // Remember a SystemUiController
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = !isSystemInDarkTheme()
-
     DisposableEffect(systemUiController, useDarkIcons) {
-        // dark icons if we're in light theme
-        systemUiController.setSystemBarsColor(
-            color = Pink38,
-            darkIcons = useDarkIcons
-        )
+        systemUiController.setSystemBarsColor(color = Pink38, darkIcons = useDarkIcons)
         onDispose {}
     }
 
