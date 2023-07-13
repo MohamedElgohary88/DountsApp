@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DountsApp</string>
+    <string name="doughnut_group">doughnut group</string>
+    <string name="doughnut_strawberry">doughnut strawberry</string>
+    <string name="doughnut_move">doughnut move</string>
+    <string name="get_started">Get Started</string>
 </resources>
