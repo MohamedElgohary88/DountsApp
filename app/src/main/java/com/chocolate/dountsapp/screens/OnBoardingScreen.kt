@@ -115,7 +115,7 @@ fun OnBoardingScreen() {
                 top.linkTo(boxDonuts.bottom, margin = 56.dp)
                 start.linkTo(parent.start, margin = 32.dp)
             },
-            text = "Gonuts\nwith\nDonuts",
+            text = stringResource(R.string.gonuts_with_donuts),
             fontFamily = Inter,
             fontSize = 54.sp,
             fontWeight = FontWeight.Bold,
@@ -126,7 +126,7 @@ fun OnBoardingScreen() {
                 top.linkTo(textTitle.bottom, margin = 16.dp)
                 start.linkTo(parent.start, margin = 32.dp)
             },
-            text = "Gonuts with Donuts is a Sri Lanka\ndedicated food outlets for specialize\nmanufacturing of Donuts in Colombo,\nSri Lanka.",
+            text = stringResource(R.string.description),
             style = MaterialTheme.typography.bodyLarge,
             color = Pink67
         )
