@@ -59,7 +59,8 @@ fun DonutItemTop(
                 .matchParentSize()
                 .shadow(
                     ambientColor = Black10,
-                    elevation = 16.dp,
+                    elevation = 4.dp,
+                    spotColor = Color.Black.copy(alpha = .1f),
                     shape = RoundedCornerShape(20.dp),
                     clip = true,
                 )
