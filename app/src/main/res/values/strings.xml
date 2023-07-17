@@ -1,9 +1,30 @@
 <resources>
-    <string name="app_name">DountsApp</string>
+    <string name="app_name">DonutsApp</string>
     <string name="doughnut_group">doughnut group</string>
     <string name="doughnut_strawberry">doughnut strawberry</string>
     <string name="doughnut_move">doughnut move</string>
     <string name="get_started">Get Started</string>
     <string name="gonuts_with_donuts">Gonuts\nwith\nDonuts</string>
     <string name="description">Gonuts with Donuts is a Sri Lanka\ndedicated food outlets for specialize\nmanufacturing of Donuts in Colombo,\nSri Lanka.</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="notifications">Notifications</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="strawberry_wheel">Strawberry Wheel</string>
+    <string name="donut_description1">These Baked Strawberry Donuts are filled with fresh strawberries...</string>
+    <string name="favourite">add to favourite</string>
+    <string name="doughnut">Doughnut</string>
+    <string name="let_s_gonuts">Let’s Gonuts!</string>
+    <string name="order_donuts">Order your favourite donuts from here</string>
+    <string name="today_offers">Today Offers</string>
+    <string name="donuts_bottom_row">Donuts</string>
+    <string name="search_icon">search icon</string>
+    <string name="chocolate_cherry">Chocolate Cherry</string>
+    <string name="_22">$22</string>
+    <string name="doughnut_image">doughnut image</string>
+    <string name="strawberry_choc">Strawberry Choc</string>
+    <string name="strawberry_rain">Strawberry Rain</string>
+    <string name="chocolate_glaze">Chocolate Glaze</string>
+    <string name="donut_description2">Moist and fluffy baked chocolate donuts full of chocolate flavor.</string>
 </resources>

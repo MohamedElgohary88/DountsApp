@@ -1,4 +1,4 @@
-package com.chocolate.dountsapp.screens
+package com.chocolate.dountsapp.screens.on_boarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

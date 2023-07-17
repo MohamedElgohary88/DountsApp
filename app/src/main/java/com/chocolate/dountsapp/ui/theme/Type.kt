@@ -10,10 +10,10 @@ import com.chocolate.dountsapp.R
 
 // Set of Material typography styles to start with
 val Inter = FontFamily(
-    Font(R.font.inter_regular, FontWeight.Normal),
-    Font(R.font.inter_medium, FontWeight.Medium),
-    Font(R.font.inter_semi_bold, FontWeight.SemiBold),
     Font(R.font.inter_bold, FontWeight.ExtraBold),
+    Font(R.font.inter_semi_bold, FontWeight.SemiBold),
+    Font(R.font.inter_medium, FontWeight.Medium),
+    Font(R.font.inter_regular, FontWeight.Normal)
 )
 val Typography = Typography(
     displayLarge = TextStyle(
