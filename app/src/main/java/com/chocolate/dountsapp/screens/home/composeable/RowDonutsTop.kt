@@ -21,7 +21,7 @@ import com.chocolate.dountsapp.ui.theme.Pink38
 import com.chocolate.dountsapp.ui.theme.Pink67
 
 @Composable
-fun RowDonutsTop(modifier: Modifier = Modifier) {
+fun RowDonutsTop(onClick: () -> Unit, modifier: Modifier = Modifier) {
     data class DonutItem(
         val imageRes: Int,
         val title: String,
@@ -57,7 +57,7 @@ fun RowDonutsTop(modifier: Modifier = Modifier) {
     ) {
         items(repeatedImageList.size) { index ->
             val item = repeatedImageList[index]
-            DonutItemTop(item.imageRes, item.title, item.description, item.color)
+            DonutItemTop(item.imageRes, item.title, item.description, item.color, onClick)
         }
     }
 }

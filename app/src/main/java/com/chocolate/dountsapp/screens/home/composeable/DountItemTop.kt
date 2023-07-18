@@ -2,6 +2,7 @@ package com.chocolate.dountsapp.screens.home.composeable
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,11 +45,13 @@ fun DonutItemTop(
     title: String,
     description: String,
     color: Color,
+    onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Box(
         contentAlignment = Alignment.CenterEnd,
         modifier = modifier
+            .clickable { onClick() }
             .height(320.dp)
             .width(193.dp)
     ) {

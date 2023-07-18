@@ -29,7 +29,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.navigation.NavController
 import com.chocolate.dountsapp.R
+import com.chocolate.dountsapp.navigation.DonutsScreen
 import com.chocolate.dountsapp.ui.theme.Black
 import com.chocolate.dountsapp.ui.theme.Inter
 import com.chocolate.dountsapp.ui.theme.Pink38
@@ -37,9 +39,9 @@ import com.chocolate.dountsapp.ui.theme.Pink67
 import com.chocolate.dountsapp.ui.theme.Pink87
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
-@Preview(showSystemUi = true)
+
 @Composable
-fun OnBoardingScreen() {
+fun OnBoardingScreen(navController: NavController) {
 
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = !isSystemInDarkTheme()
@@ -136,7 +138,7 @@ fun OnBoardingScreen() {
                     start.linkTo(parent.start)
                     end.linkTo(parent.end)
                     bottom.linkTo(parent.bottom, margin = 24.dp)
-                }, onClick = {},
+                }, onClick = {navController.navigate(DonutsScreen.HomeScreen.route)},
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color.White,
                 contentColor = Black
