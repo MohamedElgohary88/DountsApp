@@ -15,6 +15,6 @@ fun DonutsApp() {
     NavHost(navController = navController, startDestination = DonutsScreen.OnBoardingScreen.route) {
         composable(DonutsScreen.OnBoardingScreen.route) { OnBoardingScreen(navController) }
         composable(DonutsScreen.HomeScreen.route) { HomeScreen(navController) }
-        composable(DonutsScreen.DetailsScreen.route) { DetailsScreen(navController) }
+        composable(DonutsScreen.DetailsScreen.route) { DetailsScreen(/*navController*/) }
     }
 }

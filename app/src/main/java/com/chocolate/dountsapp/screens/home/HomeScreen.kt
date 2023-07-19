@@ -22,7 +22,6 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @Composable
 fun HomeScreen(navController: NavController) {
-
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = !isSystemInDarkTheme()
     DisposableEffect(systemUiController, useDarkIcons) {

@@ -103,7 +103,7 @@ fun DonutItemTop(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     Text(
-                        text = "\$20",
+                        text = stringResource(R.string._20),
                         fontFamily = Inter,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -111,7 +111,7 @@ fun DonutItemTop(
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text(
-                        text = "\$16",
+                        text = stringResource(R.string._16),
                         fontFamily = Inter,
                         fontSize = 22.sp,
                         fontWeight = FontWeight.SemiBold,
@@ -127,7 +127,7 @@ fun DonutItemTop(
             modifier = Modifier
                 .fillMaxHeight(.60f)
                 .graphicsLayer {
-                    translationX = (this.size.width - 175) / 2
+                    translationX = 165f
                     translationY = -120f
                 }
         )

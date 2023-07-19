@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import com.chocolate.dountsapp.R
 import com.chocolate.dountsapp.ui.theme.Pink38
 
@@ -26,7 +27,7 @@ fun HeaderDetails(modifier: Modifier = Modifier) {
     ) {
         Image(
             painter = painterResource(id = R.drawable.donut_strawberry_4),
-            contentDescription = "dougnut image",
+            contentDescription = stringResource(R.string.dougnut_image),
             modifier = Modifier.scale(2.8f)
         )
     }

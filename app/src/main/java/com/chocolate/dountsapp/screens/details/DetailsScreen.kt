@@ -30,12 +30,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.chocolate.dountsapp.R
+import com.chocolate.dountsapp.screens.details.composeable.AddToCart
 import com.chocolate.dountsapp.screens.details.composeable.ClickAddAndMinus
 import com.chocolate.dountsapp.screens.details.composeable.HeaderDetails
+import com.chocolate.dountsapp.screens.details.composeable.TextDetails
 import com.chocolate.dountsapp.ui.theme.Black
 import com.chocolate.dountsapp.ui.theme.Black60
 import com.chocolate.dountsapp.ui.theme.Black80
@@ -46,18 +49,17 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @Composable
 fun DetailsScreen(navController: NavController) {
-
     val systemUiController = rememberSystemUiController()
     val useDarkIcons = !isSystemInDarkTheme()
     DisposableEffect(systemUiController, useDarkIcons) {
         systemUiController.setSystemBarsColor(color = Color.Transparent, darkIcons = useDarkIcons)
         onDispose {
-            // Restore the default system bars color when the composable is disposed
-            systemUiController.setSystemBarsColor(color = Color.Transparent, darkIcons = useDarkIcons)
+            systemUiController.setSystemBarsColor(
+                color = Color.Transparent,
+                darkIcons = useDarkIcons
+            )
         }
     }
-
-
     Box(modifier = Modifier.fillMaxSize()) {
         HeaderDetails()
         Box(
@@ -75,37 +77,7 @@ fun DetailsScreen(navController: NavController) {
                     .align(Alignment.BottomCenter)
                     .padding(top = 35.dp, start = 40.dp, end = 40.dp)
             ) {
-                Text(
-                    text = stringResource(id = R.string.strawberry_wheel),
-                    color = Pink87,
-                    fontFamily = Inter,
-                    fontSize = 30.sp,
-                    fontWeight = FontWeight.SemiBold
-                )
-                Text(
-                    text = stringResource(R.string.about_gonut),
-                    color = Black80,
-                    fontFamily = Inter,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(top = 32.dp)
-                )
-                Text(
-                    text = stringResource(R.string.these_soft_cake),
-                    color = Black60,
-                    fontFamily = Inter,
-                    fontSize = 14.sp,
-                    fontWeight = FontWeight.Normal,
-                    modifier = Modifier.padding(top = 16.dp)
-                )
-                Text(
-                    text = stringResource(R.string.quantity),
-                    color = Black80,
-                    fontFamily = Inter,
-                    fontSize = 18.sp,
-                    fontWeight = FontWeight.Medium,
-                    modifier = Modifier.padding(top = 16.dp)
-                )
+                TextDetails()
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(20.dp),
                     modifier = Modifier.padding(top = 20.dp)
@@ -122,29 +94,14 @@ fun DetailsScreen(navController: NavController) {
                             .fillMaxSize()
                     ) {
                         Text(
-                            text = "£16",
+                            text = stringResource(R.string._16_),
                             color = Black,
                             fontFamily = Inter,
                             fontSize = 30.sp,
                             fontWeight = FontWeight.SemiBold
                         )
                         Spacer(modifier = Modifier.width(16.dp))
-                        Button(
-                            onClick = { /*TODO*/ },
-                            colors = ButtonDefaults
-                                .buttonColors(Pink87),
-                            modifier = Modifier.fillMaxWidth()
-
-                        ) {
-                            Text(
-                                text = "Add to Cart",
-                                color = Color.White,
-                                fontFamily = Inter,
-                                fontSize = 20.sp,
-                                fontWeight = FontWeight.SemiBold,
-                                modifier = Modifier.padding(vertical = 12.dp)
-                            )
-                        }
+                        AddToCart()
                     }
                 }
             }
@@ -164,7 +121,6 @@ fun DetailsScreen(navController: NavController) {
                         )
                         .size(48.dp)
                         .clip(shape)
-
                         .background(color = Color.White)
                         .padding(8.dp)
                 )
