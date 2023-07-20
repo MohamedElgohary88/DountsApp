@@ -16,9 +16,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.AlertDialogDefaults.shape
-import androidx.compose.material3.Button
-import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
@@ -30,7 +27,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -40,11 +36,8 @@ import com.chocolate.dountsapp.screens.details.composeable.ClickAddAndMinus
 import com.chocolate.dountsapp.screens.details.composeable.HeaderDetails
 import com.chocolate.dountsapp.screens.details.composeable.TextDetails
 import com.chocolate.dountsapp.ui.theme.Black
-import com.chocolate.dountsapp.ui.theme.Black60
-import com.chocolate.dountsapp.ui.theme.Black80
 import com.chocolate.dountsapp.ui.theme.Inter
-import com.chocolate.dountsapp.ui.theme.Pink38
-import com.chocolate.dountsapp.ui.theme.Pink87
+import com.chocolate.dountsapp.ui.theme.White
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
 @Composable
@@ -108,20 +101,20 @@ fun DetailsScreen(navController: NavController) {
             Box(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
-                    .padding(end = 32.dp, top = 26.dp)
+                    .padding(end = 32.dp, top = 36.dp)
+                    .shadow(
+                        elevation = 4.dp,
+                        shape = RoundedCornerShape(32),
+                        spotColor = Color.Black.copy(alpha = .1f)
+                    )
             ) {
                 Image(
                     painter = painterResource(id = R.drawable.ic_heart),
                     contentDescription = stringResource(R.string.add_to_favourite_icon),
                     modifier = Modifier
-                        .shadow(
-                            elevation = 4.dp,
-                            shape = RoundedCornerShape(32),
-                            spotColor = Color.Black.copy(alpha = .1f)
-                        )
-                        .size(48.dp)
-                        .clip(shape)
-                        .background(color = Color.White)
+                        .size(42.dp)
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(White)
                         .padding(8.dp)
                 )
             }

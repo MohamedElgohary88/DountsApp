@@ -47,7 +47,12 @@ fun OnBoardingScreen(navController: NavController) {
     val useDarkIcons = !isSystemInDarkTheme()
     DisposableEffect(systemUiController, useDarkIcons) {
         systemUiController.setSystemBarsColor(color = Pink38, darkIcons = useDarkIcons)
-        onDispose {}
+        onDispose {
+            systemUiController.setSystemBarsColor(
+                color = Pink38,
+                darkIcons = useDarkIcons
+            )
+        }
     }
 
     ConstraintLayout(
